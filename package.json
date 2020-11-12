@@ -4,8 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "ng": "ng",
-    "build": "cd client && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "app": "nodemon app.js",
