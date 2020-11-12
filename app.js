@@ -35,11 +35,9 @@ app.use('/api/auth', auth);
 app.use(bodyParser.urlencoded({ extended: true }));
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static('client/dist/client'));
+  app.use(express.static(`${__dirname}/client/dist/client/`));
   app.get('*', (req, res) => {
-    res.sendFile(
-      path.resolve(__dirname, 'client', 'dist', 'client', 'index.html')
-    );
+    res.sendFile('./client/dist/client/index.html');
   });
 }
 
