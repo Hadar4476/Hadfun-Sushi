@@ -28,11 +28,11 @@ mongoose
   .catch((error) => console.log(error));
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use('/api/users', users);
 app.use('/api/dish-types', dish_types);
 app.use('/api/auth', auth);
-app.use(bodyParser.urlencoded({ extended: true }));
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(`${__dirname}/client/dist/client/`));
