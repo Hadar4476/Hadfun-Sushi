@@ -1,0 +1,31 @@
+.w-200px {
+  width: 200px;
+}
+
+.fs-3rem {
+  font-size: 3rem;
+}
+
+.ff-nn {
+  font-family: "Nuku Nuku";
+}
+
+.ff-custom {
+  font-family: "Osake";
+}
+
+.go-back-btn {
+  outline: 3px solid #000000;
+  background-color: #fff;
+  outline-offset: -5px;
+  width: 200px;
+  height: 50px;
+  font-size: 2rem;
+  transition-duration: 0.5s;
+}
+.go-back-btn:hover {
+  outline: 3px solid #fff;
+  outline-offset: -5px;
+  background-color: #000000;
+  color: white;
+}

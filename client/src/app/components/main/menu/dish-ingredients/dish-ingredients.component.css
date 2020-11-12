@@ -1,0 +1,48 @@
+.ingredients_box {
+  right: 1px;
+  bottom: 1px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.innie_ingredients_box {
+  position: fixed;
+  top: 250px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 650px;
+  height: 505px;
+  z-index: 999;
+}
+
+.ingredients-container {
+  height: 500px;
+}
+
+.bg-\#bf0000d3 {
+  background-color: #bf0000;
+}
+
+.border-\#fff {
+  border: 3px solid #ffffff;
+}
+
+.w-custom {
+  width: 40px;
+}
+
+.border-radius {
+  border-radius: 5px;
+}
+
+.border-black {
+  border: 4px solid #000000;
+}
+
+.list-group-item {
+  border: none !important;
+  background-color: transparent !important;
+}

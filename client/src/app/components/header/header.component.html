@@ -1,0 +1,39 @@
+<nav
+  class="navbar navbar-expand-xl navbar-light bg-#000 navbar-box-shadow h-80px"
+>
+  <a class="navbar-brand mt-40px" routerLink="/"
+    ><img
+      class="w-100px hadfun-logo ml-4"
+      src="../../../assets/images/logos/logo6.png"
+      alt="logo"
+    />
+  </a>
+  <span class="&span text-white ff-ajc fs-2.5rem mt-30px"> & </span>
+  <img
+    class="sushi-logo w-100px ml-2 mt-40px"
+    src="../../../assets/images/logos/logo10.png"
+    alt="sushi-logo"
+  />
+  <ul class="navbar-nav m-auto"></ul>
+  <div id="user_panel" class="d-none">
+    <button
+      class="btn dropdown-toggle text-white mt-1"
+      type="button"
+      (click)="toggleDropdownMenu($event)"
+    >
+      Hello, {{ username }}
+    </button>
+    <div
+      #dropdown_menu
+      [ngClass]="show ? 'dropdown-menu mt-10px ml-2 show' : 'd-none'"
+    >
+      <a routerLink="order-history" class="dropdown-item">Orders History</a>
+      <a (click)="onLogOut()" class="dropdown-item">Logout</a>
+    </div>
+  </div>
+  <img
+    class="bowl-logo w-60px mr-4"
+    src="https://www.flaticon.com/svg/static/icons/svg/2322/2322542.svg"
+    alt="bowl"
+  />
+</nav>

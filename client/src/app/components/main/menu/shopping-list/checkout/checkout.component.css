@@ -1,0 +1,78 @@
+.checkout_container {
+  position: fixed;
+  top: 200px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  width: 600px;
+  height: 530px;
+  z-index: 999;
+}
+
+.form-label {
+  font-size: 2rem;
+  font-family: "Fredoka One";
+  color: #000000;
+}
+.form-input {
+  height: 40px;
+  border: solid 2px rgba(0, 0, 0, 0.315);
+  transition-duration: 0.5s;
+}
+
+.form-input:focus {
+  border: solid 2px #000000;
+  box-shadow: none !important;
+}
+
+.form-input-error {
+  height: 40px;
+  border: solid 2px rgba(195, 16, 16, 0.966);
+}
+
+.form-input-error:focus {
+  box-shadow: none !important;
+}
+
+.outline-black {
+  outline: 4px solid black;
+  outline-offset: -10px;
+}
+
+.complete-order-btn {
+  background: rgba(218, 18, 18, 0.966);
+  font-size: 1.2rem;
+  border: 2px solid white;
+  transition-duration: 0.5s;
+  width: 30%;
+}
+
+.complete-order-btn-loading {
+  background: rgb(218, 18, 18);
+  font-size: 1.2rem;
+  border: 2px solid white;
+  width: 30%;
+}
+
+.complete-order-btn:hover {
+  background: rgba(238, 19, 19, 0.966);
+  border: 2px solid black;
+}
+
+.complete-order-btn:focus {
+  box-shadow: none !important;
+}
+.complete-order-btn-loading:focus {
+  box-shadow: none !important;
+}
+
+.hidden {
+  opacity: 0%;
+  font-size: 1.1rem;
+}
+
+.show {
+  font-size: 1.1rem;
+  opacity: 100%;
+  color: red;
+}

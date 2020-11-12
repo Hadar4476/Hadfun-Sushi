@@ -1,0 +1,104 @@
+<div class="container text-center mt-1">
+  <div class="row">
+    <div class="col">
+      <img
+        src="../../../../assets/images/sign in page/sign-in-page-logo-4.png"
+        alt="sign-in-logo"
+      />
+      <form
+        #sign_in_form="ngForm"
+        (ngSubmit)="onSubmit(sign_in_form)"
+        class="text-left w-50 m-custom p-4 bg-white h-custom relative rounded border-black outline-gold"
+      >
+        <div class="form-group w-100 text-center">
+          <p class="fs-custom ff-fo">Sign in and start your order now!</p>
+        </div>
+        <div class="form-group m-custom-1">
+          <label for="email_input" class="form-label">Email :</label>
+          <input
+            type="email"
+            [ngClass]="
+              (sign_in_form.submitted &&
+                !sign_in_form.form.controls.email.valid) ||
+              (sign_in_form.submitted &&
+                sign_in_form.form.controls.email &&
+                sign_in_form.form.controls.email.value.length < 6)
+                ? 'form-control form-input-error mt-3'
+                : 'form-control form-input mt-3'
+            "
+            id="email_input"
+            [placeholder]=""
+            ngModel
+            name="email"
+            autocomplete="email"
+            required
+            email
+          />
+          <p
+            id="email_error"
+            [ngClass]="
+              (sign_in_form.submitted &&
+                !sign_in_form.form.controls.email.valid) ||
+              (sign_in_form.submitted &&
+                sign_in_form.form.controls.email &&
+                sign_in_form.form.controls.email.value.length < 6)
+                ? 'show m-1'
+                : 'hidden m-1'
+            "
+          >
+            * Please enter a valid email address
+          </p>
+        </div>
+        <div class="form-group mt-5 m-4">
+          <label for="password_input" class="form-label">Password :</label>
+          <input
+            type="password"
+            [ngClass]="
+              (sign_in_form.submitted &&
+                !sign_in_form.form.controls.password.valid) ||
+              (sign_in_form.submitted &&
+                sign_in_form.form.controls.password &&
+                sign_in_form.form.controls.password.value.length < 5)
+                ? 'form-control form-input-error mt-3'
+                : 'form-control form-input mt-3'
+            "
+            id="password_input"
+            [placeholder]=""
+            ngModel
+            name="password"
+            autocomplete="new-password"
+            required
+          />
+          <p
+            [ngClass]="
+              (sign_in_form.submitted &&
+                !sign_in_form.form.controls.password.valid) ||
+              (sign_in_form.submitted &&
+                sign_in_form.form.controls.password &&
+                sign_in_form.form.controls.password.value.length < 5)
+                ? 'show m-1'
+                : 'hidden m-1'
+            "
+          >
+            * Password is too short
+          </p>
+        </div>
+        <div class="form-group w-100 text-center mt-5">
+          <a
+            routerLink="/sign-up"
+            class="float-left ml-4 to-sign-up-anchor mt-4"
+            >Don't have an account? Sign up!</a
+          >
+        </div>
+        <div class="absolute-bottom mb-5">
+          <button
+            type="submit"
+            class="btn float-right text-white mr-6 sign-in-btn w-custom"
+          >
+            Sign in
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

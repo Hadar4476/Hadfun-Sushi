@@ -1,0 +1,135 @@
+<div
+  id="checkout_darkbox"
+  class="dark container-fluid center text-center animate__animated animate__fadeIn"
+  (click)="onDarkBoxClick()"
+></div>
+<div
+  id="innie_checkout_darkbox"
+  class="dark_box center animate__animated animate__fadeIn"
+>
+  <div class="container checkout_container text-center bg-white outline-black">
+    <div class="row">
+      <div class="col m-4">
+        <form
+          #checkout_form="ngForm"
+          class="text-left"
+          (ngSubmit)="onSubmit(checkout_form, $event)"
+        >
+          <div class="text-center">
+            <h3>Fill the fields below to complete the order.</h3>
+          </div>
+          <div class="form-group mt-4">
+            <label for="name" class="form-label">Name :</label>
+            <input
+              type="name"
+              [ngClass]="
+                validateName(
+                  checkout_form.submitted,
+                  checkout_form.form.controls.name
+                )
+                  ? 'form-control form-input mt-3 w-50'
+                  : 'form-control form-input-error mt-3 w-50'
+              "
+              id="name"
+              name="name"
+              ngModel
+              required
+            />
+            <p
+              [ngClass]="
+                validateName(
+                  checkout_form.submitted,
+                  checkout_form.form.controls.name
+                )
+                  ? 'hidden'
+                  : 'show'
+              "
+            >
+              * Invalid name
+            </p>
+          </div>
+          <div class="form-group">
+            <label for="address" class="form-label">Address :</label>
+            <input
+              type="address"
+              [ngClass]="
+                validateAddress(
+                  checkout_form.submitted,
+                  checkout_form.form.controls.address
+                )
+                  ? 'form-control form-input mt-3 w-50'
+                  : 'form-control form-input-error mt-3 w-50'
+              "
+              id="address"
+              name="address"
+              ngModel
+              required
+            />
+            <p
+              [ngClass]="
+                validateAddress(
+                  checkout_form.submitted,
+                  checkout_form.form.controls.address
+                )
+                  ? 'hidden'
+                  : 'show'
+              "
+            >
+              * Invalid address
+            </p>
+          </div>
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone number :</label>
+            <input
+              type="tel"
+              [ngClass]="
+                validatePhoneNumber(
+                  checkout_form.submitted,
+                  checkout_form.form.controls.phone
+                )
+                  ? 'form-control form-input mt-3 w-50'
+                  : 'form-control form-input-error mt-3 w-50'
+              "
+              id="phone"
+              name="phone"
+              ngModel
+              required
+            />
+            <p
+              [ngClass]="
+                validatePhoneNumber(
+                  checkout_form.submitted,
+                  checkout_form.form.controls.phone
+                )
+                  ? 'hidden'
+                  : 'show'
+              "
+            >
+              * Invalid phone number
+            </p>
+          </div>
+          <div class="form-group mt-5">
+            <button
+              type="submit"
+              class="btn float-right complete-order-btn text-white"
+              id="complete_order_btn"
+            >
+              <span id="loading_spinner" class="d-none"> </span>
+              {{ complete_order_btnInnerHTML }}
+            </button>
+          </div>
+        </form>
+        <div id="order_complete_div" class="d-none">
+          <h1>Your order has registered and will be delivered shortly!</h1>
+          <h2>Thank you for using Hadfun&Sushi for your sushi needs!</h2>
+          <img
+            src="../../../../../../assets/images/logos/logo1.png"
+            alt="hadfun-logo"
+          />
+          <br />
+          <a routerLink="/menu" class="btn btn-primary mt-4">Confirm</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

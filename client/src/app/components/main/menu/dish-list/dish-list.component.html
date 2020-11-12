@@ -1,0 +1,57 @@
+<div id="sushi_rolls_area" class="container text-center">
+  <div class="row">
+    <div class="col mt-70px">
+      <img
+        class="w-550px"
+        src="../../../../assets/images/sushi page/sushi-page-logo-3.png"
+        alt="sushi-rolls-logo"
+      />
+    </div>
+  </div>
+</div>
+<div class="container text-center">
+  <div class="row">
+    <div class="col mt-4" *ngFor="let sushi_dish of sushi_arr; let i = index">
+      <app-dish [dish]="sushi_dish" [dish_index]="i"></app-dish>
+    </div>
+  </div>
+</div>
+<div id="vegan_sushi_rolls_area" class="container text-center">
+  <div class="row">
+    <div class="col mt-70px">
+      <img
+        class="w-550px"
+        src="../../../../assets/images/vegan page/vegan-page-logo-1.png"
+        alt="vegan-sushi-rolls-logo"
+      />
+    </div>
+  </div>
+</div>
+<div class="container text-center">
+  <div class="row">
+    <div
+      class="col mt-4"
+      *ngFor="let vegan_sushi_dish of vegan_sushi_arr; let i = index"
+    >
+      <app-dish [dish]="vegan_sushi_dish" [dish_index]="i"></app-dish>
+    </div>
+  </div>
+</div>
+<div id="from_the_wok_area" class="container text-center">
+  <div class="row">
+    <div class="col mt-70px">
+      <img
+        class="w-550px"
+        src="../../../../assets/images/wok page/wok-page-logo-4.png"
+        alt="from-the-wok-logo"
+      />
+    </div>
+  </div>
+</div>
+<div class="container text-center">
+  <div class="row">
+    <div class="col mt-4" *ngFor="let wok_dish of wok_arr; let i = index">
+      <app-dish [dish]="wok_dish" [dish_index]="i"></app-dish>
+    </div>
+  </div>
+</div>

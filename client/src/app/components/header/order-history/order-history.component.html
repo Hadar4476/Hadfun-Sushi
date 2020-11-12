@@ -1,0 +1,96 @@
+<div class="container mt-3 text-center">
+  <img
+    class="order-history-image"
+    *ngIf="orders.length > 0"
+    src="../../../../assets/images/order history page/order-history-logo.png"
+    alt="order-history-logo"
+  />
+  <div *ngIf="!orders.length">
+    <h1 class="no-orders">Seems like you yet to make your first order...</h1>
+    <a routerLink="/menu" class="btn order-now-btn text-white">Order now!</a>
+  </div>
+  <div
+    *ngIf="orders.length > 0"
+    [ngClass]="setRowColsByOrdersLength(orders.length)"
+  >
+    <div class="col" *ngFor="let order of orders; let i = index">
+      <div
+        (click)="onDarkBoxClick($event, i)"
+        class="d-none"
+        [id]="'dishes_details_darkbox' + i"
+      ></div>
+      <div [id]="'innie_dishes_details_darkbox' + i" class="d-none">
+        <div class="orderd-dishes-title-container">
+          <h1 class="orderd-dishes-title">Ordered Dishes</h1>
+        </div>
+        <div class="dish-details-container">
+          <div
+            *ngFor="let dish of dishes_ordered"
+            class="dishes-container text-left"
+          >
+            <div class="d-flex">
+              <img
+                class="dish-image"
+                [src]="
+                  '../../../../assets/images/dish-types/' +
+                  dish.dish_details.dish_image
+                "
+                [alt]="dish.dish_details.dish_name"
+              />
+              <h1 class="dish-name ml-4">{{ dish.dish_details.dish_name }}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        [ngClass]="
+          i % 2 === 0
+            ? 'card order-card going-black'
+            : 'card order-card going-white'
+        "
+      >
+        <div class="little-darkbox">
+          <div class="innie-little-darkbox w-100 h-100">
+            <button
+              class="show-dishes-btn w-100 h-100"
+              (click)="onShowDishesClick(order, i)"
+            >
+              Show dishes
+            </button>
+          </div>
+        </div>
+        <div [ngClass]="i % 2 === 0 ? 'card-body text-white' : 'card-body'">
+          <h5
+            [ngClass]="
+              i % 2 === 0
+                ? 'card-title order-info-title b-bottom-white'
+                : 'card-title order-info-title b-bottom-black'
+            "
+          >
+            Order info
+          </h5>
+          <div class="text-left pl-2 mt-4">
+            <p class="card-text order-info-p">
+              Ordered date :
+              <span class="order-info-span">{{ order.created_at }}</span>
+            </p>
+            <p class="order-info-p">
+              Registered by :
+              <span class="order-info-span">{{ order.contact.name }}</span>
+            </p>
+            <p class="order-info-p">
+              Cost :
+              <span class="order-info-span">
+                $ {{ order.order_details.total_price }}</span
+              >
+            </p>
+            <p class="order-info-p">
+              Delivered to :
+              <span class="order-info-span">{{ order.contact.address }}</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

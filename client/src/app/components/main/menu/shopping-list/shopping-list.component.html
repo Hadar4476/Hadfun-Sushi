@@ -1,0 +1,83 @@
+<div id="shopping_list_container" class="d-none">
+  <div class="row">
+    <div class="order-details col bg-black text-center text-white h-100px">
+      <i
+        (click)="onCloseShoppingListBtn()"
+        class="fas fa-window-close float-left mt-3 fa-lg cursor-pointer"
+      ></i>
+      <h1
+        id="order_details_h1"
+        class="m-4 ff-nn animate__animated animate__fadeIn animate__delay-1s space-between"
+      >
+        Order Details
+      </h1>
+    </div>
+  </div>
+  <div id="order_details_container" class="order-details-container text-center">
+    <button
+      (click)="onGoToCheckout()"
+      [ngClass]="
+        prices.length > 0
+          ? 'checkout-btn btn-#bf0000 mt-4 w-50 text-white ff-nn fs-1.5rem pt-2'
+          : 'd-none'
+      "
+    >
+      Checkout
+    </button>
+    <div class="row">
+      <div
+        class="col-11 mt-4 border-mute p-2 ml-4 rounded bg-witish h-125px mb-1"
+        *ngFor="let dish of dish_arr; let i = index"
+      >
+        <div class="d-flex justify-content-between">
+          <h1 class="ff-fredoka">{{ dish.dish_details.dish_name }}</h1>
+          <div>
+            <img
+              (click)="onCancelOrderBtnClick(i, dish.dish_id)"
+              class="w-50 float-right cursor-pointer"
+              src="../../../../../assets/images/icons/cancel.png"
+              alt="cancel order"
+            />
+          </div>
+        </div>
+        <div class="d-flex justify-content-between">
+          <img
+            class="w-80px"
+            [src]="
+              '../../../../../../assets/images/dish-types/' +
+              dish.dish_details.dish_image
+            "
+            [alt]="dish.dish_details.dish_name"
+          />
+          <div class="mt-4">
+            <p class="fs-1.5rem ff-fredoka">
+              ${{
+                dish.dish_details.dish_price * dish.dish_details.dish_amount
+              }}
+            </p>
+          </div>
+          <div class="mt-auto border-mute rounded text-center w-120px">
+            <img
+              (click)="onDiscardBtnClick(i)"
+              class="w-25px cursor-pointer p-2 border-mute-right float-left"
+              src="../../../../../assets/images/icons/minus.png"
+              alt="discard button"
+            />
+            <span
+              [id]="'amount_span' + dish.dish_id"
+              class="fs-1.5rem mr-3 p-1 ml-2"
+            >
+              {{ dish.dish_details.dish_amount }}</span
+            >
+            <img
+              (click)="onAddBtnClick(i)"
+              class="w-25px cursor-pointer mb-1 p-2 border-mute-left float-right"
+              src="../../../../../assets/images/icons/add.png"
+              alt="add button"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

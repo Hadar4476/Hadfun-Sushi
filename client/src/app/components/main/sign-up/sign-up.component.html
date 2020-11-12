@@ -1,0 +1,148 @@
+<div class="container text-center mt-1">
+  <div class="row">
+    <div class="col">
+      <img
+        src="../../../../assets/images/sign up page/sign-up-page-logo-3.png"
+        alt="sign-up-logo"
+      />
+      <form
+        #sign_up_form="ngForm"
+        (ngSubmit)="onSubmit(sign_up_form)"
+        class="text-left w-50 m-custom p-4 bg-white h-custom relative rounded border-black outline-sky-blue"
+      >
+        <div class="form-group w-100 text-center">
+          <p class="fs-custom ff-fo">New to HadFun & Sushi? Sign up!</p>
+        </div>
+        <div class="form-group mt-5 m-4">
+          <label for="email_input" class="form-label">Email :</label>
+          <input
+            type="email"
+            [ngClass]="
+              (sign_up_form.submitted &&
+                !sign_up_form.form.controls.email.valid) ||
+              (sign_up_form.submitted &&
+                sign_up_form.form.controls.email &&
+                sign_up_form.form.controls.email.value.length < 6)
+                ? 'form-control form-input-error mt-3'
+                : 'form-control form-input mt-3'
+            "
+            id="email_input"
+            [placeholder]=""
+            ngModel
+            name="email"
+            autocomplete="email"
+            required
+            email
+          />
+          <p
+            id="email_error"
+            [ngClass]="
+              (sign_up_form.submitted &&
+                !sign_up_form.form.controls.email.valid) ||
+              (sign_up_form.submitted &&
+                sign_up_form.form.controls.email &&
+                sign_up_form.form.controls.email.value.length < 6)
+                ? 'show m-1'
+                : 'hidden m-1'
+            "
+          >
+            * Please enter a valid email address
+          </p>
+        </div>
+        <div class="form-group mt-5 m-4">
+          <label for="password_input" class="form-label">Password :</label>
+          <input
+            type="password"
+            [ngClass]="
+              (sign_up_form.submitted &&
+                !sign_up_form.form.controls.password.valid) ||
+              (sign_up_form.submitted &&
+                sign_up_form.form.controls.password &&
+                sign_up_form.form.controls.password.value.length < 5)
+                ? 'form-control form-input-error mt-3'
+                : 'form-control form-input mt-3'
+            "
+            id="password_input"
+            [placeholder]=""
+            ngModel
+            name="password"
+            autocomplete="new-password"
+            required
+          />
+          <p
+            [ngClass]="
+              (sign_up_form.submitted &&
+                !sign_up_form.form.controls.password.valid) ||
+              (sign_up_form.submitted &&
+                sign_up_form.form.controls.password &&
+                sign_up_form.form.controls.password.value.length < 5)
+                ? 'show m-1'
+                : 'hidden m-1'
+            "
+          >
+            * Password is too short
+          </p>
+        </div>
+        <div class="form-group mt-5 m-4">
+          <label for="confirm_password_input" class="form-label"
+            >Confirm Password :</label
+          >
+          <input
+            type="password"
+            [ngClass]="
+              (sign_up_form.submitted &&
+                !sign_up_form.form.controls.confirm_password.valid) ||
+              (sign_up_form.submitted &&
+                sign_up_form.form.controls.confirm_password &&
+                sign_up_form.form.controls.confirm_password.value.length < 5) ||
+              (sign_up_form.submitted &&
+                sign_up_form.form.controls.confirm_password &&
+                sign_up_form.form.controls.confirm_password.value !==
+                  sign_up_form.form.controls.password.value)
+                ? 'form-control form-input-error mt-3'
+                : 'form-control form-input mt-3'
+            "
+            id="confirm_password_input"
+            [placeholder]=""
+            ngModel
+            name="confirm_password"
+            autocomplete="new-password"
+            required
+          />
+          <p
+            [ngClass]="
+              (sign_up_form.submitted &&
+                !sign_up_form.form.controls.confirm_password.valid) ||
+              (sign_up_form.submitted &&
+                sign_up_form.form.controls.confirm_password &&
+                sign_up_form.form.controls.confirm_password.value.length < 5) ||
+              (sign_up_form.submitted &&
+                sign_up_form.form.controls.confirm_password &&
+                sign_up_form.form.controls.confirm_password.value !==
+                  sign_up_form.form.controls.password.value)
+                ? 'show m-1'
+                : 'hidden m-1'
+            "
+          >
+            * Passwords do not match
+          </p>
+        </div>
+        <div class="form-group w-100 text-center">
+          <a
+            routerLink="/sign-in"
+            class="float-left ml-4 to-sign-in-anchor mt-3"
+            >Already have an account? Sign in!</a
+          >
+        </div>
+        <div class="absolute-bottom mb-5">
+          <button
+            type="submit"
+            class="btn float-right text-white mr-6 sign-up-btn w-custom"
+          >
+            Sign up
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

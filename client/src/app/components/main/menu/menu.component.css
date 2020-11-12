@@ -1,0 +1,55 @@
+.w-550px {
+  width: 550px;
+}
+
+.ff-brush {
+  font-family: "Osake";
+}
+
+.fs-3\.5rem {
+  font-size: 5.5rem;
+}
+
+.dish-types-menu {
+  position: fixed;
+  margin: 0 auto;
+  width: 800px;
+  left: 0;
+  right: 0;
+  background-color: #000000;
+  outline: 2px solid #ffffffc7;
+  outline-offset: -6px;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  z-index: 1;
+  transition-duration: 0.5s;
+}
+
+.dish-type-button {
+  font-size: 2rem;
+  padding: 10px !important;
+  font-family: "Nuku Nuku";
+  color: rgba(195, 16, 16, 0.966);
+  transition-duration: 0.5s;
+  background-color: transparent;
+  border: transparent;
+}
+
+.dish-type-button:hover {
+  color: #ffffff;
+}
+
+button:focus {
+  border: transparent !important;
+  box-shadow: transparent !important;
+  outline: none !important;
+}
+
+button:disabled,
+button[disabled] {
+  opacity: 100% !important;
+  color: #ffffff;
+}

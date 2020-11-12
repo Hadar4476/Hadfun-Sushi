@@ -1,0 +1,213 @@
+/* Fonts Sizes: */
+
+.fs-4rem {
+  font-size: 4rem;
+}
+
+.fs-3\.5rem {
+  font-size: 3.5rem;
+}
+
+.fs-2\.5rem {
+  font-size: 2.5rem;
+}
+
+.fs-2\.2rem {
+  font-size: 2.2rem;
+}
+
+.fs-2rem {
+  font-size: 2rem;
+}
+
+.fs-1\.5rem {
+  font-size: 1.5rem;
+}
+
+.fs-1\.2rem {
+  font-size: 2rem;
+}
+
+/* Widths: */
+
+.w-150px {
+  width: 150px;
+}
+
+.w-20px {
+  width: 30px;
+}
+
+.w-200px {
+  width: 200px;
+}
+
+.w-900px {
+  width: 900px;
+}
+
+/* Heights: */
+
+.h-151px {
+  height: 140px;
+}
+
+.h-50px {
+  height: 50px;
+}
+.h-55px {
+  height: 55px;
+}
+
+/* Fonts: */
+
+.ff-neucha {
+  font-family: "Neucha", cursive;
+}
+
+.ff-nitb {
+  font-family: "Night in Tokyo Shadow Regular";
+}
+
+.ff-nuku {
+  font-family: "Nuku Nuku";
+}
+
+.ff-cc {
+  font-family: "CatCafe";
+}
+
+.ff-cy {
+  font-family: "Chrome Yellow YellowInlineNF";
+}
+
+.border-black {
+  border: 3px black solid;
+}
+
+.border-gold {
+  border: 3px #dbbb01 solid;
+}
+
+.mt-44px {
+  margin-top: 44px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.dish-image {
+  transition-duration: 1s;
+}
+
+.dish-image:hover {
+  filter: saturate(1.2);
+}
+
+.btn-\#bf0000 {
+  transition-duration: 0.2s;
+  background-color: #bf0000;
+}
+
+.flip-image {
+  transform: scaleX(-1);
+}
+
+.order-btn {
+  width: 200px;
+  border: 2px solid #000000;
+  transition-duration: 0.7s;
+}
+
+.order-btn:hover {
+  outline: 2px solid rgb(236, 231, 231);
+  outline-offset: -5px;
+  background-color: black !important;
+  color: white;
+}
+
+.order-btn-bg-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px solid #000000;
+  filter: saturate(7);
+}
+
+.ingredients-btn {
+  border: 1px black solid;
+  transition-duration: 0.5s;
+}
+
+.ingredients-btn:hover {
+  border: 4.5px black solid;
+}
+
+.remove-box-shaodw-on-focus:focus {
+  box-shadow: none !important;
+}
+
+.bg-blackish {
+  background-color: #0f0e0ee8;
+}
+
+.bg-whitish {
+  background-color: #ffffffb2;
+}
+
+.rec-des-div {
+  transition-duration: 1s;
+}
+
+.rec-des-div:hover {
+  box-shadow: inset 0px 0px 7px 1px #ffffff;
+}
+
+.ticket-price {
+  position: relative;
+  left: 38px;
+  background-image: url("../../../../../../assets/images/icons/shop-price-tag.png");
+  width: 60px;
+  height: 120px;
+  background-repeat: no-repeat;
+}
+
+.price {
+  position: relative;
+  top: -5px;
+}
+
+.dollar-icon {
+  position: relative;
+  top: -60px;
+  right: 15px;
+  color: #56c36d;
+}
+
+.rotate-20deg {
+  transform: rotate(45deg);
+}
+
+.bg-image-1 {
+  background-image: url("../../../../../../assets/images/clouds/cloud-1.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.bg-image {
+  background-image: url("../../../../../../assets/images/clouds/cloud-6.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+button:disabled,
+button[disabled] {
+  opacity: 100% !important;
+}

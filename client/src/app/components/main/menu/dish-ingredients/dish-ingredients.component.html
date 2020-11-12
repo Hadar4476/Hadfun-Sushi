@@ -1,0 +1,28 @@
+<div
+  id="ingredients_box"
+  class="d-none"
+  (click)="onIngredientskBoxClick($event)"
+></div>
+<div id="innie_ingredients_box" class="d-none">
+  <div
+    class="ingredients-container container bg-#bf0000d3 text-center border-#fff"
+  >
+    <h1 class="mt-3 text-white">- Ingredients -</h1>
+    <div class="row row-cols-4">
+      <div class="col p-2" *ngFor="let ingredient of ingredients">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <img
+              class="w-custom"
+              [src]="ingredients_dir + ingredient + '.png'"
+              [alt]="ingredient"
+            />
+            <p class="text-white">
+              {{ handleIngredientName(ingredient) }}
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

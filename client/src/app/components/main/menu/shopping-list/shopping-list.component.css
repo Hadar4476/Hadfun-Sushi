@@ -1,0 +1,134 @@
+.shopping-list-container {
+  top: 50px;
+  right: 0;
+  position: fixed !important;
+  z-index: 2;
+  animation-name: shopping-list-container-motion-display;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  background-image: url("../../../../../assets/images/cute-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition-duration: 0.5s;
+}
+
+@keyframes shopping-list-container-motion-display {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 500px;
+  }
+}
+
+@keyframes shopping-list-container-motion-hide {
+  from {
+    width: 500px;
+  }
+  to {
+    width: 0px;
+    right: -50px;
+  }
+}
+
+.order-details-container {
+  height: 765px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.order-details-container::-webkit-scrollbar-track {
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  background-color: white;
+}
+
+.checkout-btn {
+  transition-duration: 1s !important;
+  height: 50px;
+}
+
+.checkout-btn:hover {
+  border: 2px solid #ffffff;
+  filter: saturate(1);
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.h-100px {
+  height: 100px;
+}
+
+.ff-nn {
+  font-family: "Ninja Naruto";
+}
+
+.ff-brush {
+  font-family: "Japanese Brush";
+}
+
+.order-details {
+  outline: 1px solid #bf000098;
+  outline-offset: -8px;
+}
+
+.h-125px {
+  height: 125px;
+}
+
+.w-80px {
+  width: 80px;
+}
+
+.w-25px {
+  width: 25px;
+}
+
+.w-120px {
+  min-width: 120px;
+}
+
+.border-mute {
+  border: 2px solid #00000044;
+}
+
+.border-mute-right {
+  border-right: 2px solid #00000044;
+}
+
+.border-mute-left {
+  border-left: 2px solid #00000044;
+}
+
+.border-black {
+  border: 1px solid #000000;
+}
+
+.ff-fredoka {
+  font-family: "Fredoka One";
+}
+
+.space-between {
+  word-spacing: 15px;
+}
+
+.bg-witish {
+  background-color: #ffffffad;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.fs-1\.5rem {
+  font-size: 1.5rem;
+}
+
+.btn-\#bf0000 {
+  background-color: #bf0000;
+}
